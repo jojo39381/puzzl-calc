@@ -169,6 +169,7 @@ const getReadableValue = (key, value) => {
 }
   const [errorMsg, setErrorMsg] = useState("")
   const submitForm = async (e) => {
+      console.log(userInput)
         e.preventDefault()
         const formValidated = validateForm()
 
@@ -428,7 +429,7 @@ const makeResults = (finalWithholdings) => {
             <div style={FormSectionStyle}>
             <h3 style={FormTitle}>First, tell us some general information:</h3>
             <TextField  label="Check date" type='date' fullWidth={true} style={FormStyle} size="small" id="outlined-basic" variant="outlined" value={userInput["general"]["date"] || new Date().toISOString().split('T')[0]} onChange={(e) => {handleFormChange(e, "general", "date")}}/>
-            <TextField  required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" variant="outlined" label="Address" value={userInput["general"]["address"] || ""} onChange={(e) => {handleFormChange(e, "general", "address")}}/>
+            <TextField required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" variant="outlined" label="Address" value={userInput["general"]["address"] || ""} onChange={(e) => {handleFormChange(e, "general", "address")}}/>
             <TextField fullWidth={true} style={FormStyle} size="small" id="outlined-basic" variant="outlined" label="Address line 2" value={userInput["general"]["address_line_2"] || ""} onChange={(e) => {handleFormChange(e, "general", "address_line_2")}}/>
             <TextField required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" variant="outlined" label="City" value={userInput["general"]["city"] || ""} onChange={(e) => {handleFormChange(e, "general", "city")}}/>
             <TextField
@@ -448,9 +449,9 @@ const makeResults = (finalWithholdings) => {
                   </MenuItem>
                 ))}
             </TextField>
-            <TextField required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" variant="outlined" label="Zip" value={userInput["general"]["zip"] || ""} onChange={(e) => {handleFormChange(e, "general", "zip")}}/>
-            <TextField required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label="Gross pay" variant="outlined"  value={userInput["general"]["gross_pay"] || ""} onChange={(e) => {handleFormChange(e, "general", "gross_pay")}}/>
-            <TextField fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label="Gross pay YTD" variant="outlined" value={userInput["general"]["gross_pay_YTD"] || ""} onChange={(e) => {handleFormChange(e, "general", "gross_pay_YTD")}}/>
+            <TextField type="number" required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" variant="outlined" label="Zip" value={userInput["general"]["zip"] || ""} onChange={(e) => {handleFormChange(e, "general", "zip")}}/>
+            <TextField type="number" required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label="Gross pay" variant="outlined"  value={userInput["general"]["gross_pay"] || ""} onChange={(e) => {handleFormChange(e, "general", "gross_pay")}}/>
+            <TextField type="number" fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label="Gross pay YTD" variant="outlined" value={userInput["general"]["gross_pay_YTD"] || ""} onChange={(e) => {handleFormChange(e, "general", "gross_pay_YTD")}}/>
             <TextField required fullWidth={true} style={FormStyle} size="small" id="outlined-basic" select label="Pay frequency" variant="outlined" value={userInput["general"]["pay_frequency"] || freqs[0]} onChange={(e) => {handleFormChange(e, "general", "pay_frequency")}}>
             {freqs.map((freqOption) => (
                     <MenuItem value={freqOption}>
@@ -486,7 +487,7 @@ const makeResults = (finalWithholdings) => {
                )}
             else {
               return (
-                <TextField fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label={detail.code} variant="outlined"  value={userInput["federal"][detail.code] || ""} onChange={(e) => {handleFormChange(e, "federal", detail.code)}}/>
+                <TextField type="number" fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label={detail.code} variant="outlined"  value={userInput["federal"][detail.code] || ""} onChange={(e) => {handleFormChange(e, "federal", detail.code)}}/>
               )
             }})}
            </div>
@@ -514,7 +515,7 @@ const makeResults = (finalWithholdings) => {
                 )}
             else {
               return (
-                <TextField fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label={detail.code} variant="outlined" value={userInput["state"][detail.code] || ""} onChange={(e) => {handleFormChange(e, "state", detail.code)}}/>
+                <TextField type="number" fullWidth={true} style={FormStyle} size="small" id="outlined-basic" label={detail.code} variant="outlined" value={userInput["state"][detail.code] || ""} onChange={(e) => {handleFormChange(e, "state", detail.code)}}/>
               )
             }})
            } 
