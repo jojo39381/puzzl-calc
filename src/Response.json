@@ -1,0 +1,75 @@
+{
+    "result": [
+        { 
+            "codename": "FIT",
+            "name": "Federal Income Tax",
+            "payer": "EMPLOYEE_WITHHOLDING",
+            "jurisdiction": "US",
+            "withheld": 0
+        },
+        {
+            "codename": "FICA_Medicare_EE",
+            "name": "Medicare",
+            "payer": "EMPLOYEE_WITHHOLDING",
+            "jurisdiction": "US",
+            "withheld": 14.5
+        },
+        {
+            "codename": "FICA_Medicare_ER",
+            "name": "Medicare",
+            "payer": "EMPLOYER_LIABILITY",
+            "jurisdiction": "US",
+            "withheld": 14.5
+        },
+        {
+            "codename": "FICA_MedicareAdditional_EE",
+            "name": "Medicare Additional",
+            "payer": "EMPLOYEE_WITHHOLDING",
+            "jurisdiction": "US",
+            "withheld": 0
+        },
+        {
+            "codename": "FICA_SocialSecurity_EE",
+            "name": "Social Security",
+            "payer": "EMPLOYEE_WITHHOLDING",
+            "jurisdiction": "US",
+            "withheld": 62
+        },
+        {
+            "codename": "FICA_SocialSecurity_ER",
+            "name": "Social Security",
+            "payer": "EMPLOYER_LIABILITY",
+            "jurisdiction": "US",
+            "withheld": 62
+        },
+        {
+            "codename": "FUTA",
+            "name": "Federal Unemployment Tax",
+            "payer": "EMPLOYER_LIABILITY",
+            "jurisdiction": "US",
+            "withheld": 0
+        },
+        {
+            "codename": "SUTA_CA",
+            "name": "State Unemployment Tax",
+            "payer": "EMPLOYER_LIABILITY",
+            "jurisdiction": "CA",
+            "withheld": 0
+        },
+        {
+            "codename": "SDI_CA_EE",
+            "name": "California Temporary Disability Insurance Tax",
+            "payer": "EMPLOYEE_WITHHOLDING",
+            "jurisdiction": "CA",
+            "withheld": 10
+        },
+        {
+            "codename": "SDI_CA_ER",
+            "name": "California Temporary Disability Voluntary Plan Assesesement",
+            "payer": "EMPLOYER_LIABILITY",
+            "jurisdiction": "CA",
+            "withheld": 1.4
+        }
+    ]
+ }
+ 

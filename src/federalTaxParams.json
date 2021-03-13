@@ -1,0 +1,133 @@
+[{
+    "code": "FILINGSTATUS",
+    "effectiveDate": 2020,
+    "type": "options",
+    "options": [
+        {
+            "code": "S",
+            "name": "Single or Married filing separately",
+            "effectiveDate": 2020
+        },
+        {
+            "code": "M",
+            "name": "Married filing jointly",
+            "effectiveDate": 2020
+        },
+        {
+            "code": "H",
+            "name": "Head of Household",
+            "effectiveDate": 2020
+        }
+    ],
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "code": "S"
+        }
+    ]
+  },
+  {
+    "code": "IS_NON_RESIDENT_ALIEN",
+    "effectiveDate": 2020,
+    "type": "boolean",
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "value": false
+        }
+    ]
+  },
+  {
+    "code": "TWO_JOBS",
+    "effectiveDate": 2020,
+    "type": "boolean",
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "value": false
+        }
+    ]
+  },
+  {
+    "code": "DEPENDENTS_AMOUNT",
+    "effectiveDate": 2020,
+    "type": "dollars",
+    "constraints": [
+        {
+            "min": 0,
+            "max": null,
+            "effectiveDate": 2020
+        }
+    ],
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "value": 0
+        }
+    ]
+  },
+  {
+    "code": "OTHER_INCOME",
+    "effectiveDate": 2020,
+    "type": "dollars",
+    "constraints": [
+        {
+            "min": 0,
+            "max": null,
+            "effectiveDate": 2020
+        }
+    ],
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "value": 0
+        }
+    ]
+  },
+  {
+    "code": "EXTRA_WH",
+    "effectiveDate": 2020,
+    "type": "dollars",
+    "constraints": [
+        {
+            "min": 0,
+            "max": null,
+            "effectiveDate": 2020
+        }
+    ],
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "value": 0
+        }
+    ]
+  },
+  {
+    "code": "DEDUCTIONS",
+    "effectiveDate": 2020,
+    "type": "dollars",
+    "constraints": [
+        {
+            "min": 0,
+            "max": null,
+            "effectiveDate": 2020
+        }
+    ],
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "value": 0
+        }
+    ]
+  },
+  {
+    "code": "EXEMPT",
+    "effectiveDate": 2020,
+    "type": "boolean",
+    "defaults": [
+        {
+            "effectiveDate": 2020,
+            "value": false
+        }
+    ]
+  }]
